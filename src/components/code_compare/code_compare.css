@@ -1,0 +1,18 @@
+.round{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.true{
+    background: forestgreen;
+}
+.false{
+    background: red;
+}
+.position{
+    background: aliceblue;
+    padding: 16px;
+}
