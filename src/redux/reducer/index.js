@@ -1,4 +1,4 @@
-import {COMPARE_CODE, INPUT_CODE, RESET, SUBMIT_USER_CODE, SUCCESSFUL} from "../../actions/action_types";
+import {COMPARE_CODE, INPUT_CODE, RESET, SUCCESSFUL} from "../../actions/action_types";
 
 const initial_value = {
     code: (Math.floor(Math.random() * (9999 - 1000)) + 1000).toString(),
@@ -9,7 +9,6 @@ const initial_value = {
 
 export const reducer = (state = initial_value, action) => {
     switch (action.type) {
-        case SUBMIT_USER_CODE: return {...state, user_version: action.payload};
         case INPUT_CODE: return {...state, user_version: action.payload}
         case COMPARE_CODE: return {...state, compare_code: action.payload}
         case SUCCESSFUL: return {...state, successful: true}

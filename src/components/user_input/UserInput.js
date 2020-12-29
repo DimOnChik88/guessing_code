@@ -16,8 +16,8 @@ export const UserInput = memo(({onSubmitUserCode, user_version, onInputValue}) =
         <div>
             <form onSubmit={onFormSubmit}>
                 <input type="number" onInput={handleInput} maxLength='4'
-                       ref={input_ref} value={user_version}/>
-                <button disabled={user_version.length !== 4}>Submit code</button>
+                       ref={input_ref} value={user_version} data-testid='user_input'/>
+                <button disabled={!!user_version && user_version.length !== 4} data-testid='submit_button'>Submit code</button>
             </form>
         </div>
     );
