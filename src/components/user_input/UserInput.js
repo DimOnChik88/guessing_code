@@ -8,7 +8,7 @@ export const UserInput = memo(({onSubmitUserCode, user_version, onInputValue}) =
     }
     const handleInput = () => {
         const input = input_ref.current.value
-        if (Number(input) && input.length <= 4) {
+        if ((Number(input) && input.length <= 4) || input === '') {
             onInputValue(input)
         }
     }
